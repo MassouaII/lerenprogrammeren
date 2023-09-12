@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<!--begin html-->
+<h1>Datatype conversion</h1>
+<h2>number, parseFloat, parseInt</h2>
+<h3>var, let, const</h3>
+<p>Uitbreiding: wijzig de prompts naar een formulier.</p>
+
+<label for="">What is your birth year?:</label>
+<input type="text" id="yearOfBirth"><br>
+<label for="">Hoeveel jaren wens je erbij te tellen?:</label>
+<input type="text" id="numberOfYears"><br>
+<button type="button" id="calculateYears">Calculate</button>
+
+<p id="myResult"></p>
+
+
+<!--end html-->
+
+
+<!--begin javascript-->
+</body>
+<script>
+    //let yearOfBirth = window.prompt("What is your birth year?");
+    //let aantalJaren = window.prompt("Hoeveel jaren wens je erbij te tellen?");
+    // yearOfBirth = YearOfBirth + 1;
+    //This doesn't work, why?
+    //yearOfBirth = Number(yearOfBirth) + Number(aantalJaren);
+
+//solution: Calculate from html to input
+//1. Take the input info
+let yearOfBirth = document.getElementById("yearOfBirth").value;
+let numberOfYears = document.getElementById("numberOfYears").value;
+    console.log(numberOfYears);
+//2. To activate the button
+document.getElementById("calculateYears").onclick = function(){
+let yearOfBirth = document.getElementById("yearOfBirth").value;
+let numberOfYears = document.getElementById("numberOfYears").value;
+//3. Convert string into number
+let result = Number(yearOfBirth) + Number(numberOfYears);
+console.log(result);
+document.getElementById("myResult").innerHTML = result;}
+
+//document.getElementById("calculateYears").onclick = function (){
+ //   document.getElementById();
+//}
+
+
+
+
+
+
+</script>
+<!--end javascript-->
+</html>

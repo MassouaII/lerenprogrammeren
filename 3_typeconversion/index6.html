@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<!--begin html-->
+<!--oefening-->
+<!--Plus 1 à l'infini-->
+
+<button type="button" id="telOp">FIBIONACCI</button>
+<p id="resultaat"></p>
+
+
+<!--end html-->
+
+
+<!--begin javascript-->
+</body>
+<script>
+    let vorigGetal = 0;
+    let huidigGetal = 1;
+
+    document.getElementById("telOp").onclick = function(){
+        let volgendGetal = vorigGetal + huidigGetal;
+        vorigGetal = huidigGetal;
+        huidigGetal = volgendGetal;
+        document.getElementById("resultaat").innerHTML = volgendGetal;
+    }
+
+</script>
+<!--end javascript-->
+</html>

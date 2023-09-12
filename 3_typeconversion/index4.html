@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<!--begin html-->
+<!--oefening-->
+<!--maak een kleine rekenmachine-->
+
+<input type="text" id="valueOne">
+<input type="text" id="valueTwo">
+<label for=""></label>
+<button type="button" id="add">+</button>
+<label for=""></label>
+<button type="button" id="subtract">-</button>
+<label for=""></label>
+<button type="button" id="multiply">*</button>
+<label for=""></label>
+<button type="button" id="divide">/</button><br>
+<label for=""></label>
+
+<p id="myResult"></p>
+
+
+<!--end html-->
+
+
+<!--begin javascript-->
+</body>
+<script>
+    let valueOne = document.getElementById("valueOne").value;
+    let valueTwo = document.getElementById("valueTwo").value;
+    //console.log(valueOne);
+    document.getElementById("add").onclick = function(){
+        let valueOne = document.getElementById("valueOne").value;
+        let valueTwo = document.getElementById("valueTwo").value;
+        let result = Number(valueOne) + Number(valueTwo);
+        console.log(result);
+        document.getElementById("myResult").innerHTML = result;}
+       //Short version
+    // document.getElementById("add").onclick = function(){
+           // let valueOne = Number(document.getElementById("valueOne").value);
+           // let valueTwo = Number(document.getElementById("valueTwo").value);
+           // document.getElementById("myResult").innerHTML = valueOne + valueTwo;
+
+    document.getElementById("subtract").onclick = function(){
+        let valueOne = document.getElementById("valueOne").value;
+        let valueTwo = document.getElementById("valueTwo").value;
+        let result = Number(valueOne) - Number(valueTwo);
+        console.log(result);
+        document.getElementById("myResult").innerHTML = result;}
+    document.getElementById("multiply").onclick = function(){
+        let valueOne = document.getElementById("valueOne").value;
+        let valueTwo = document.getElementById("valueTwo").value;
+        let result = Number(valueOne) * Number(valueTwo);
+        console.log(result);
+        document.getElementById("myResult").innerHTML = result;}
+    document.getElementById("divide").onclick = function(){
+        let valueOne = document.getElementById("valueOne").value;
+        let valueTwo = document.getElementById("valueTwo").value;
+        let result = Number(valueOne) / Number(valueTwo);
+        console.log(result);
+        document.getElementById("myResult").innerHTML = result;}
+
+
+</script>
+<!--end javascript-->
+</html>
